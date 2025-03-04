@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.leaderboard-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.leaderboard {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.leaderboard th, .leaderboard td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.leaderboard th {
+    background-color: #f2f2f2;
+}
+
+.leaderboard tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.leaderboard tr:hover {
+    background-color: #f1f1f1;
+}
+
+.leaderboard tr:first-child {
+    background-color: gold;
+    font-weight: bold;
+    position: relative;
+    animation: flame 1s infinite;
+}
+
+.leaderboard tr:first-child::before {
+    content: "🔥";
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.leaderboard tr:nth-child(2) {
+    background-color: silver;
+    font-weight: bold;
+    position: relative;
+}
+
+.leaderboard tr:nth-child(2)::before {
+    content: "🥈";
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.leaderboard tr:nth-child(3) {
+    background-color: #cd7f32; /* Bronze color */
+    font-weight: bold;
+    position: relative;
+}
+
+.leaderboard tr:nth-child(3)::before {
+    content: "🥉";
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.leaderboard tr:nth-child(4)::before {
+    content: "🏅";
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.leaderboard tr:nth-child(5)::before {
+    content: "🎖️";
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.leaderboard tr:nth-child(6)::before {
+    content: "🏆";
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.leaderboard tr:nth-child(7)::before {
+    content: "🏅";
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.leaderboard tr:nth-child(8)::before {
+    content: "🎖️";
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.leaderboard tr:nth-child(9)::before {
+    content: "🏆";
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.leaderboard tr:nth-child(10)::before {
+    content: "🏅";
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.leaderboard tr:nth-child(11)::before {
+    content: "🎖️";
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.leaderboard tr:nth-child(12)::before {
+    content: "🏆";
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@keyframes flame {
+    0% { box-shadow: 0 0 10px rgba(255, 69, 0, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(255, 69, 0, 1); }
+    100% { box-shadow: 0 0 10px rgba(255, 69, 0, 0.5); }
+}
