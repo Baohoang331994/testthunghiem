@@ -43,7 +43,7 @@ body {
     background-color: gold;
     font-weight: bold;
     position: relative;
-    animation: flame 1s infinite;
+    animation: flame 1s infinite, rainbow 2s infinite;
 }
 
 .leaderboard tr:first-child::before {
@@ -58,6 +58,7 @@ body {
     background-color: silver;
     font-weight: bold;
     position: relative;
+    animation: rainbow 2s infinite;
 }
 
 .leaderboard tr:nth-child(2)::before {
@@ -72,6 +73,7 @@ body {
     background-color: #cd7f32; /* Bronze color */
     font-weight: bold;
     position: relative;
+    animation: rainbow 2s infinite;
 }
 
 .leaderboard tr:nth-child(3)::before {
@@ -158,4 +160,15 @@ body {
     0% { box-shadow: 0 0 10px rgba(255, 69, 0, 0.5); }
     50% { box-shadow: 0 0 20px rgba(255, 69, 0, 1); }
     100% { box-shadow: 0 0 10px rgba(255, 69, 0, 0.5); }
+}
+
+@keyframes rainbow {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
 }
