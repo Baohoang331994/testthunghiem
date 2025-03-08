@@ -3,83 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bảng Xếp Hạng</title>
-    <link rel="stylesheet" href="leaderboard.css">
+    <title>Đăng Nhập và Đăng Ký</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="leaderboard-container">
-        <h1>Bảng Xếp Hạng</h1>
-        <table class="leaderboard">
-            <thead>
-                <tr>
-                    <th>Hạng</th>
-                    <th>Đội</th>
-                    <th>Điểm</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Khánh Linh và Hương</td>
-                    <td>30</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Bảo và Nghiệp</td>
-                    <td>28</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Đội C</td>
-                    <td>26</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Đội D</td>
-                    <td>24</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Đội E</td>
-                    <td>22</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Đội F</td>
-                    <td>20</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Đội G</td>
-                    <td>18</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Đội H</td>
-                    <td>16</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>Đội I</td>
-                    <td>14</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>Đội J</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>Đội K</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>Đội L</td>
-                    <td>8</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Tạo Tài Khoản</h1>
+                <input type="text" placeholder="Tên" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Mật khẩu" />
+                <button>Đăng Ký</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Đăng Nhập</h1>
+                <input type="text" placeholder="Tài khoản" />
+                <input type="password" placeholder="Mật khẩu" />
+                <button>Đăng Nhập</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Chào Mừng Trở Lại!</h1>
+                    <p>Để giữ kết nối với chúng tôi, vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>
+                    <button class="ghost" id="signIn">Đăng Nhập</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Xin Chào!</h1>
+                    <p>Nhập thông tin cá nhân của bạn và bắt đầu hành trình với chúng tôi</p>
+                    <button class="ghost" id="signUp">Đăng Ký</button>
+                </div>
+            </div>
+        </div>
     </div>
+    <script>
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add('right-panel-active');
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove('right-panel-active');
+        });
+    </script>
 </body>
 </html>
